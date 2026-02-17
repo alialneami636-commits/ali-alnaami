@@ -3,135 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>علي النعمي | استشارات مالية فاخرة</title>
+    <title>علي النعمي | استشارات مالية ومحاسبية فاخرة</title>
     
     <meta property="og:title" content="علي النعمي | خبير استشارات محاسبية">
-    <meta property="og:description" content="حلول مالية ذكية ومبتكرة. دقة تصنع الفارق في أعمالك.">
+    <meta property="og:description" content="دقة تصنع الفارق.. حلول مالية ومحاسبية مبتكرة لأعمالك.">
     <meta property="og:image" content="https://alialneami.netlify.app/logo.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        :root { --gold: #D4AF37; --navy: #001a39; }
-        body { font-family: 'Cairo', sans-serif; background: #000b1a; color: white; overflow-x: hidden; }
-
-        /* تأثير الجزيئات الذهبية في الخلفية */
-        #particles-js {
-            position: absolute; width: 100%; height: 100%; z-index: 1;
+        :root {
+            --royal-blue: #001a39;
+            --ocean-blue: #002D62;
+            --gold: #D4AF37;
+            --gold-light: #f3cf65;
         }
 
-        /* تصميم الكروت بنظام الزجاج الفاخر */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            transition: all 0.5s ease;
+        body { font-family: 'Cairo', sans-serif; background: #f8fafc; overflow-x: hidden; }
+
+        /* تدرج احترافي بديل للأسود */
+        .royal-gradient {
+            background: linear-gradient(135deg, var(--royal-blue) 0%, var(--ocean-blue) 100%);
         }
-        .glass-card:hover {
+
+        /* كروت الخدمات بنظام النيومورفيزم الناعم */
+        .luxury-card {
+            background: #ffffff;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 10px 10px 20px #e2e8f0, -10px -10px 20px #ffffff;
+        }
+        .luxury-card:hover {
+            transform: translateY(-12px);
             border-color: var(--gold);
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 45, 98, 0.1);
         }
 
-        /* زر متوهج تفاعلي */
-        .glow-btn {
-            background: linear-gradient(135deg, #D4AF37, #f3cf65);
-            color: #000;
-            position: relative;
-            z-index: 10;
-            overflow: hidden;
+        /* زر الرقم العائم تفاعلي */
+        .phone-float {
+            position: fixed; bottom: 30px; left: 30px; z-index: 100;
+            background: var(--gold); color: var(--royal-blue);
+            padding: 12px 20px; border-radius: 50px;
+            font-weight: 900; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            display: flex; align-items: center; gap: 10px;
+            animation: slideIn 1s ease;
         }
-        .glow-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%; width: 200%; height: 200%;
-            background: rgba(255,255,255,0.3);
-            transform: rotate(45deg);
-            transition: 0.5s;
-        }
-        .glow-btn:hover::after { left: 120%; }
+        @keyframes slideIn { from { transform: translateX(-100px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
-        /* حركة سلسة للنصوص */
-        .text-gradient {
-            background: linear-gradient(to bottom right, #fff, #D4AF37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .text-gold { background: linear-gradient(to right, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
+
 <body>
 
-    <div id="particles-js"></div>
+    <a href="tel:782309030" class="phone-float active:scale-90 transition-transform">
+        <i data-lucide="phone-call"></i>
+        <span>782309030</span>
+    </a>
 
-    <header class="fixed w-full z-50 backdrop-blur-lg border-b border-white/5 py-4 px-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <svg width="40" height="40" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="90" stroke="#D4AF37" stroke-width="2"/>
-                    <path d="M60 140 L150 70" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
-                </svg>
-                <span class="font-black text-xl tracking-tight">علي النعمي</span>
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 py-4 px-6 border-b border-slate-100 shadow-sm flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <svg width="45" height="45" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="90" stroke="var(--ocean-blue)" stroke-width="3"/>
+                <path d="M60 140 L150 70" stroke="var(--gold)" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+            <div>
+                <h1 class="text-xl font-black text-slate-900 leading-none">علي النعمي</h1>
+                <p class="text-[10px] text-amber-600 font-bold uppercase tracking-[0.2em] mt-1">Financial Expert</p>
             </div>
-            <a href="https://wa.me/967782309030" class="glow-btn px-6 py-2 rounded-full font-bold text-sm">تواصل</a>
         </div>
+        <a href="https://wa.me/967782309030" class="bg-slate-900 text-amber-500 px-6 py-2 rounded-xl text-xs font-black shadow-lg">واتساب</a>
     </header>
 
-    <section class="min-h-screen flex items-center justify-center relative z-10 text-center px-6">
-        <div data-aos="zoom-in">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 text-gradient italic">إتقان <br> مالي مُطلق</h1>
-            <p class="text-slate-400 max-w-xl mx-auto mb-10 text-lg">نحن نبني الأنظمة المالية التي تصمد أمام الزمن وتدفعك للمقدمة.</p>
-            <div class="flex justify-center gap-4">
-                <button class="glow-btn px-10 py-4 rounded-2xl font-black">ابدأ رحلتك</button>
+    <section class="royal-gradient text-white py-32 px-6 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 blur-[120px]"></div>
+        
+        <div class="relative z-10" data-aos="fade-up">
+            <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">الإتقان المحاسبي <br><span class="text-gold">بمعايير عالمية</span></h2>
+            <p class="text-slate-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+                علي النعمي | نقدم لك أدق التفاصيل المالية لضمان نمو استثماراتك في السوق اليمني.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="tel:782309030" class="bg-white text-slate-900 px-10 py-5 rounded-2xl font-black shadow-xl flex items-center gap-3 hover:bg-slate-50 transition-all">
+                    <i data-lucide="phone" class="text-amber-500"></i> اتصل بالخبير
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 container mx-auto px-6 relative z-10">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-10 rounded-[3rem]" data-aos="fade-up">
-                <i data-lucide="shield-check" class="text-amber-500 mb-6 w-12 h-12"></i>
-                <h3 class="text-2xl font-bold mb-4 text-white">الأمان الضريبي</h3>
-                <p class="text-slate-400 text-sm">حلول ذكية لضمان الالتزام الكامل وتجنب المخاطر المالية.</p>
+    <section class="py-24 px-6 container mx-auto">
+        <div class="flex flex-col items-center mb-16 text-center" data-aos="fade-up">
+            <h3 class="text-3xl font-black text-slate-900">خدماتنا الاستراتيجية</h3>
+            <p class="text-slate-500 mt-2">حلول مالية متكاملة لرواد الأعمال والشركات</p>
+            <div class="w-16 h-1 bg-amber-500 mt-4 rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="luxury-card p-10 rounded-[3rem] text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                    <i data-lucide="bar-chart-big" class="text-blue-900 w-10 h-10"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-slate-900 uppercase">القوائم المالية</h3>
+                <p class="text-slate-500 text-sm leading-loose">إعداد التقارير السنوية والدورية بأعلى معايير الشفافية والدقة.</p>
             </div>
-            <div class="glass-card p-10 rounded-[3rem]" data-aos="fade-up" data-aos-delay="200">
-                <i data-lucide="cpu" class="text-amber-500 mb-6 w-12 h-12"></i>
-                <h3 class="text-2xl font-bold mb-4 text-white">الأتمتة المالية</h3>
-                <p class="text-slate-400 text-sm">تحويل الأنظمة التقليدية إلى ذكاء محاسبي رقمي فائق.</p>
+
+            <div class="luxury-card p-10 rounded-[3rem] text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                    <i data-lucide="shield-check" class="text-blue-900 w-10 h-10"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-slate-900 uppercase">التدقيق الداخلي</h3>
+                <p class="text-slate-500 text-sm leading-loose">مراجعة وفحص السجلات لضمان حماية أصول المنشأة من الهدر.</p>
             </div>
-            <div class="glass-card p-10 rounded-[3rem]" data-aos="fade-up" data-aos-delay="400">
-                <i data-lucide="landmark" class="text-amber-500 mb-6 w-12 h-12"></i>
-                <h3 class="text-2xl font-bold mb-4 text-white">إدارة الثروات</h3>
-                <p class="text-slate-400 text-sm">استشارات استراتيجية لنمو رأس المال واستدامة الشركات.</p>
+
+            <div class="luxury-card p-10 rounded-[3rem] text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                    <i data-lucide="file-text" class="text-blue-900 w-10 h-10"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-slate-900 uppercase">الزكاة والضرائب</h3>
+                <p class="text-slate-500 text-sm leading-loose">تمثيل مهني في الملفات الضريبية لضمان الامتثال القانوني التام.</p>
+            </div>
+
+            <div class="luxury-card p-10 rounded-[3rem] text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                    <i data-lucide="settings-2" class="text-blue-900 w-10 h-10"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-slate-900 uppercase">الأنظمة المحاسبية</h3>
+                <p class="text-slate-500 text-sm leading-loose">تصميم الدورات المستندية وتحويل الأنظمة إلى سحابية ذكية.</p>
+            </div>
+
+            <div class="luxury-card p-10 rounded-[3rem] text-center lg:col-span-2" data-aos="fade-up" data-aos-delay="500">
+                <div class="w-20 h-20 bg-amber-50 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                    <i data-lucide="lightbulb" class="text-amber-600 w-10 h-10"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-slate-900 uppercase">دراسات الجدوى</h3>
+                <p class="text-slate-500 text-sm leading-loose">تحليل المشاريع الجديدة وتقديم استشارات اقتصادية مبنية على أرقام حقيقية للسوق.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center border-t border-white/5 relative z-10">
-        <p class="text-slate-600 text-sm tracking-[0.3em] font-bold">&copy; 2026 ALI AL-NEAMI | ELITE SOLUTIONS</p>
+    <footer class="bg-slate-950 text-white py-24 px-6 rounded-t-[5rem] text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h4 class="text-gold font-black text-3xl mb-4">علي النعمي</h4>
+            <p class="text-slate-400 mb-10 text-lg">أرقامك هي أمانتنا، ونجاحك هو هدفنا الأسمى.</p>
+            
+            <div class="flex justify-center gap-12 mb-16 text-slate-500">
+                <a href="tel:782309030" class="hover:text-gold transition-colors flex flex-col items-center gap-2">
+                    <i data-lucide="phone"></i>
+                    <span class="text-xs">اتصال</span>
+                </a>
+                <a href="https://wa.me/967782309030" class="hover:text-green-500 transition-colors flex flex-col items-center gap-2">
+                    <i data-lucide="message-circle"></i>
+                    <span class="text-xs">واتساب</span>
+                </a>
+            </div>
+            
+            <p class="text-[10px] text-slate-800 tracking-[0.5em] font-bold uppercase">&copy; 2026 Ali Al-Neami Financial Consultancy</p>
+        </div>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 1000, once: true });
         lucide.createIcons();
-
-        // إعدادات الجزيئات الذهبية
-        particlesJS('particles-js', {
-            "particles": {
-                "number": { "value": 80 },
-                "color": { "value": "#D4AF37" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.2 },
-                "size": { "value": 2 },
-                "line_linked": { "enable": true, "distance": 150, "color": "#D4AF37", "opacity": 0.1, "width": 1 },
-                "move": { "enable": true, "speed": 2 }
-            }
-        });
     </script>
 </body>
     </html>
-    
+                        
