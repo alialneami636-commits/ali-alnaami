@@ -1,305 +1,708 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
-<meta name="google-site-verification" content="ZAH1NVj7aXeonDPYIaUZvcYS97AGoJqQzMEX-1IqTcY" />
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>علي النعمي | مستشار مالي ومعتمد - تدقيق، زكاة، دراسات جدوى</title>
-    <meta name="description" content="المستشار المالي علي النعمي، خبير في التدقيق المحاسبي، الاستشارات الضريبية والزكوية، ودراسات الجدوى الاقتصادية في اليمن والخليج.">
-    <meta name="keywords" content="علي النعمي, مستشار مالي, تدقيق محاسبي, محاسب قانوني اليمن, حساب الزكاة, دراسات جدوى, استشارات مالية صنعاء">
-    <meta name="author" content="Ali Al-Nuami">
-    
-    <meta property="og:title" content="علي النعمي | الاستشارات المالية الفاخرة">
-    <meta property="og:description" content="نصنع للقيمة أبعاداً جديدة. خدمات تدقيق واستشارات مالية بمعايير عالمية.">
+    <!-- Primary SEO Metadata -->
+    <title>علي النعمي | استشارات مالية ومحاسبية وتدقيق حسابات الشركات</title>
+    <meta name="title" content="علي النعمي | استشارات مالية ومحاسبية وتدقيق حسابات الشركات">
+    <meta name="description" content="خدمات محاسبية واستشارات مالية معتمدة للشركات والمؤسسات: تدقيق القوائم المالية وفق IFRS، إعداد الإقرارات الزكوية والضريبية، التحليل المالي، ودراسات الجدوى.">
+    <meta name="keywords" content="استشارات مالية, تدقيق حسابات, محاسب قانوني, مراجعة القوائم المالية, معايير IFRS, ضريبة الأرباح التجارية, فحص زكوي, نظم محاسبية, علي النعمي">
+    <meta name="author" content="Ali Al-Naami">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / WhatsApp / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://yourdomain.com/preview-image.jpg"> <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="مكتب علي النعمي للاستشارات المالية والمحاسبية">
+    <meta property="og:title" content="علي النعمي | استشارات مالية ومحاسبية وحوكمة أعمال معتمدة">
+    <meta property="og:description" content="تدقيق وفحص القوائم المالية، تخطيط التدفقات النقدية، الامتثال الضريبي والزكوي، وتطوير الدورات المستندية للشركات.">
+
+    <!-- Google Fonts: Cairo (Direct Standard Link) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
 
     <style>
-        :root { --gold: #c5a059; --navy: #0a1128; }
-        body { font-family: 'Cairo', sans-serif; transition: 0.5s; overflow-x: hidden; cursor: none; }
-        
-        body.dark { background-color: var(--navy); color: #ffffff; }
-        body.light { background-color: #f8fafc; color: var(--navy); }
-        .text-main { color: inherit; }
-        body.light .text-main, body.light h1, body.light h2, body.light h3, body.light p { color: var(--navy) !important; }
+        :root {
+            --bg-base: #060b17;
+            --bg-surface: #0b1426;
+            --bg-surface-elevated: #101c36;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(197, 160, 89, 0.35);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --gold-primary: #c5a059;
+            --gold-hover: #d4b26f;
+            --gold-subtle: rgba(197, 160, 89, 0.1);
+            --font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+            --transition-fast: 0.2s ease-in-out;
+            --max-w: 1200px;
+        }
 
-        .cursor-dot { width: 8px; height: 8px; background: var(--gold); position: fixed; border-radius: 50%; pointer-events: none; z-index: 1000; }
-        .cursor-outline { width: 40px; height: 40px; border: 2px solid var(--gold); position: fixed; border-radius: 50%; pointer-events: none; z-index: 999; transition: transform 0.15s ease-out; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        .glass-card { 
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(197, 160, 89, 0.2);
-            transition: 0.4s;
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.65;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-w);
+            margin-inline: auto;
+            padding-inline: 1.5rem;
+        }
+
+        /* Accessibility: Skip Navigation Link */
+        .skip-navigation-link {
+            position: absolute;
+            top: -100px;
+            right: 1.5rem;
+            background: var(--gold-primary);
+            color: #040813;
+            padding: 0.75rem 1.5rem;
+            font-weight: 800;
+            font-size: 0.9rem;
+            border-radius: 0 0 8px 8px;
+            z-index: 99999;
+            text-decoration: none;
+            transition: top var(--transition-fast);
+        }
+
+        .skip-navigation-link:focus {
+            top: 0;
+            outline: 3px solid #ffffff;
+        }
+
+        /* Focus rings */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--gold-primary) !important;
+            outline-offset: 3px !important;
+        }
+
+        /* ================= Header Styles ================= */
+        .site-header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(6, 11, 23, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            text-decoration: none;
+        }
+
+        .brand-emblem {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--gold-subtle);
+            border: 1.5px solid var(--gold-primary);
+            color: var(--gold-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+
+        .brand-meta {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .brand-role {
+            font-size: 0.75rem;
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        @media (min-width: 960px) {
+            .nav-menu { display: flex; }
+        }
+
+        .nav-item-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .nav-item-link:hover {
+            color: var(--gold-primary);
+        }
+
+        .header-cta-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: inherit;
+            text-decoration: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            min-height: 46px;
+            min-width: 44px;
+        }
+
+        .btn-gold {
+            background-color: var(--gold-primary);
+            color: #040813;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border-color: var(--border-subtle);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold-primary);
+            background: var(--gold-subtle);
+            color: var(--gold-hover);
+        }
+
+        .menu-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        @media (min-width: 960px) {
+            .menu-toggle { display: none; }
+        }
+
+        /* Safe Mobile Drawer (Display None by default to prevent blocking screen) */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(6, 11, 23, 0.98);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-close-btn {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-link {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .mobile-link:hover {
+            color: var(--gold-primary);
+        }
+
+        /* ================= Hero Section ================= */
+        .hero-section {
+            padding: 4.5rem 0 5.5rem;
             position: relative;
         }
-        .glass-card:hover { border-color: var(--gold); box-shadow: 0 0 30px rgba(197, 160, 89, 0.2); transform: translateY(-5px); }
-        body.light .glass-card { background: rgba(255, 255, 255, 0.8); border-color: rgba(0,0,0,0.1); }
 
-        #ai-chat-window { 
-            display: none; position: fixed; bottom: 100px; left: 30px; width: 340px; height: 480px; z-index: 1000; 
-            flex-direction: column; border-radius: 30px; overflow: hidden;
-            background: rgba(10, 17, 40, 0.85); backdrop-filter: blur(25px);
-            border: 1px solid var(--gold);
-        }
-        .chat-bubble { padding: 12px; border-radius: 15px; margin-bottom: 10px; font-size: 13px; }
-        .ai-msg { background: var(--gold); color: var(--navy) !important; align-self: flex-start; }
-        .user-msg { background: rgba(255,255,255,0.1); align-self: flex-end; }
-
-        .btn-luxury { background: var(--gold); color: var(--navy); font-weight: 800; transition: 0.3s; position: relative; z-index: 10; }
-        .lang-switch { font-size: 10px; cursor: pointer; border: 1px solid var(--gold); color: var(--gold); padding: 2px 6px; border-radius: 4px; }
-        .lang-switch.active { background: var(--gold); color: var(--navy); }
-        
-        .share-btn { transition: 0.3s; cursor: pointer; }
-        .share-btn:hover { color: var(--gold); transform: scale(1.1); }
-    </style>
-</head>
-<body class="dark">
-
-    <div class="cursor-dot md:block hidden"></div>
-    <div class="cursor-outline md:block hidden"></div>
-
-    <header class="fixed w-full z-[100] px-4 py-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center bg-white/5 backdrop-blur-lg p-3 rounded-2xl border border-white/10 shadow-xl">
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-gold rounded-xl flex items-center justify-center text-navy font-black text-xl shadow-lg">ع</div>
-                <div class="flex flex-col">
-                    <div class="flex items-center gap-3">
-                        <h1 class="text-main font-black text-lg leading-none" data-key="name">علي النعمي</h1>
-                        <div class="flex items-center gap-1 bg-black/20 p-1 rounded-lg">
-                            <button onclick="toggleDarkMode()" class="text-gold p-1 hover:scale-110"><i data-lucide="sun" id="theme-icon" class="w-4 h-4"></i></button>
-                            <button onclick="shareSite()" class="text-gold p-1 share-btn"><i data-lucide="share-2" class="w-4 h-4"></i></button>
-                            <span onclick="setLanguage('ar')" id="lang-ar" class="lang-switch active">AR</span>
-                            <span onclick="setLanguage('en')" id="lang-en" class="lang-switch">EN</span>
-                        </div>
-                    </div>
-                    <span class="text-[9px] text-gold font-bold tracking-[2px]" data-key="title">Financial Consultant</span>
-                </div>
-            </div>
-            <a href="https://wa.me/967782309030" class="bg-emerald-600 text-white px-4 py-2 rounded-xl text-[11px] font-bold flex items-center gap-2 shadow-lg"><i data-lucide="message-circle" class="w-4 h-4"></i> <span data-key="consultBtn">واتساب</span></a>
-        </div>
-    </header>
-
-    <section class="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
-        <div id="particles-js" class="absolute inset-0"></div>
-        <div class="relative z-10" data-aos="fade-up">
-            <h2 class="text-5xl md:text-7xl font-black mb-6 text-main">
-                <span data-key="hero1">نصنع للقيمة</span> <br>
-                <span id="typewriter" class="text-gold"></span>
-            </h2>
-            <p class="text-slate-400 max-w-xl mx-auto mb-8 text-main opacity-80" data-key="heroDesc">مستشارك المالي المعتمد للتدقيق والمراجعة والحلول الضريبية المبتكرة.</p>
-            
-            <div class="max-w-xs mx-auto p-4 rounded-3xl border border-gold/30 bg-gold/5 flex justify-center gap-8 mb-10 shadow-inner">
-                <a href="https://wa.me/967782309030" class="flex items-center gap-2 text-emerald-500 font-bold text-sm"><i data-lucide="message-circle"></i> WhatsApp</a>
-                <div class="w-[1px] bg-gold/30"></div>
-                <a href="tel:+967782309030" class="flex items-center gap-2 text-blue-500 font-bold text-sm"><i data-lucide="phone"></i> Call Now</a>
-            </div>
-
-            <button onclick="toggleChat()" class="btn-luxury px-12 py-4 rounded-2xl text-sm flex items-center gap-2 mx-auto"><i data-lucide="message-square"></i> <span data-key="startBtn">مساعد علي</span></button>
-        </div>
-    </section>
-
-    <section class="py-24 container mx-auto px-6 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up">
-                <i data-lucide="shield-check" class="text-gold mb-5 w-10 h-10"></i>
-                <h3 class="text-xl font-black mb-3 text-main" data-key="ser1">التدقيق والمراجعة</h3>
-                <p class="text-sm opacity-70 text-main" data-key="ser1Desc">مراجعة شاملة لضمان سلامة المركز المالي.</p>
-            </div>
-            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
-                <i data-lucide="landmark" class="text-gold mb-5 w-10 h-10"></i>
-                <h3 class="text-xl font-black mb-3 text-main" data-key="ser2">الزكاة والضرائب</h3>
-                <p class="text-sm opacity-70 text-main" data-key="ser2Desc">حلول ذكية للامتثال الضريبي والزكوي.</p>
-            </div>
-            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
-                <i data-lucide="gem" class="text-gold mb-5 w-10 h-10"></i>
-                <h3 class="text-xl font-black mb-3 text-main" data-key="ser3">دراسات الجدوى</h3>
-                <p class="text-sm opacity-70 text-main" data-key="ser3Desc">دراسات اقتصادية تضمن نجاح استثمارك.</p>
-            </div>
-            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
-                <i data-lucide="cpu" class="text-gold mb-5 w-10 h-10"></i>
-                <h3 class="text-xl font-black mb-3 text-main" data-key="ser4">تأسيس الأنظمة</h3>
-                <p class="text-sm opacity-70 text-main" data-key="ser4Desc">بناء هياكل محاسبية رقمية حديثة.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-10 container mx-auto px-6 relative z-10">
-        <div class="glass-card p-10 rounded-[3rem] flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2">
-                <h3 class="text-3xl font-black mb-5 text-gold" data-key="whyUsTitle">لماذا نحن؟</h3>
-                <p class="text-main opacity-80 leading-relaxed mb-6" data-key="whyUsDesc">نجمع بين المعرفة العميقة بالتشريعات المحلية والأنظمة المحاسبية العالمية.</p>
-                <ul class="space-y-3 text-sm font-bold text-main">
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-gold w-4 h-4"></i> سرية بيانات تامة</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-gold w-4 h-4"></i> دقة محاسبية متناهية</li>
-                </ul>
-            </div>
-            <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                <div class="bg-gold/10 p-6 rounded-2xl border border-gold/20 text-center"><i data-lucide="lock" class="mx-auto text-gold mb-2"></i><p class="text-[10px] font-bold">السرية</p></div>
-                <div class="bg-gold/10 p-6 rounded-2xl border border-gold/20 text-center"><i data-lucide="award" class="mx-auto text-gold mb-2"></i><p class="text-[10px] font-bold">الجودة</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6">
-        <div class="max-w-4xl mx-auto glass-card p-10 rounded-[3rem] text-center" data-aos="zoom-in">
-            <h3 class="text-3xl font-black mb-8 text-main" data-key="calcTitle">الحاسبة الزكوية</h3>
-            <div class="flex flex-col md:flex-row gap-4">
-                <input type="number" id="zakat-input" placeholder="المبلغ الصافي" class="flex-1 bg-black/20 border border-gold/30 p-4 rounded-xl text-center font-bold text-gold outline-none">
-                <button onclick="calculateZakat()" class="btn-luxury px-10 py-4 rounded-xl shadow-lg">احسب</button>
-            </div>
-            <div id="zakat-result" class="mt-6 hidden text-2xl font-black text-main"></div>
-        </div>
-    </section>
-
-    <div id="ai-chat-window">
-        <div class="bg-gold p-4 flex justify-between items-center text-navy">
-            <span class="font-black text-sm flex items-center gap-2"><i data-lucide="message-square"></i> مساعد علي</span>
-            <button onclick="toggleChat()"><i data-lucide="x"></i></button>
-        </div>
-        <div class="flex-1 p-4 overflow-y-auto flex flex-col gap-2" id="chat-body">
-            <div class="chat-bubble ai-msg font-bold">أهلاً بك! كيف يمكنني مساعدتك اليوم؟</div>
-        </div>
-        <div class="p-3 bg-white/5 flex gap-2">
-            <input type="text" id="chat-input" placeholder="اكتب سؤالك..." class="flex-1 bg-black/20 border border-gold/20 rounded-xl px-4 py-2 text-white text-xs outline-none">
-            <button onclick="handleBot()" class="bg-gold p-2 rounded-xl text-navy shadow-md"><i data-lucide="send"></i></button>
-        </div>
-    </div>
-
-    <button onclick="toggleChat()" class="fixed bottom-8 left-8 bg-gold text-navy w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-[1001] transition-all hover:scale-110"><i data-lucide="message-square"></i></button>
-
-    <footer class="py-20 container mx-auto px-6 border-t border-white/5 opacity-90">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-main">
-            <div>
-                <h4 class="text-2xl font-black mb-4">علي النعمي</h4>
-                <p class="text-sm opacity-60 leading-relaxed">الخيار الأول للمال والأعمال.</p>
-            </div>
-            <div>
-                <h5 class="font-black text-gold mb-4 uppercase text-xs tracking-widest">روابط سريعة</h5>
-                <ul class="space-y-2 text-sm opacity-80">
-                    <li><a href="#" onclick="toggleChat()" class="hover:text-gold transition">طلب استشارة</a></li>
-                    <li><a href="https://wa.me/967782309030" class="hover:text-gold transition">تواصل واتساب</a></li>
-                    <li><a href="#" onclick="shareSite()" class="hover:text-gold transition flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3"></i> مشاركة الموقع</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="font-black text-gold mb-4 uppercase text-xs tracking-widest">معلومات التواصل</h5>
-                <ul class="space-y-2 text-sm opacity-80">
-                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> 782309030</li>
-                    <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> صنعاء - اليمن</li>
-                </ul>
-            </div>
-        </div>
-        <div class="mt-16 text-center text-[10px] opacity-30 uppercase tracking-[4px]">© 2026 Ali Al-Nuami.</div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        AOS.init({ duration: 800 }); lucide.createIcons();
-
-        const translations = {
-            ar: { name: "علي النعمي", title: "مستشار مالي", hero1: "نصنع للقيمة", heroDesc: "مستشارك المالي المعتمد للتدقيق والمراجعة والحلول الضريبية المبتكرة.", consultBtn: "واتساب", startBtn: "مساعد علي", ser1: "التدقيق والمراجعة", ser1Desc: "مراجعة شاملة لضمان سلامة المركز المالي.", ser2: "الزكاة والضرائب", ser2Desc: "حلول ذكية للامتثال الضريبي والزكوي.", ser3: "دراسات الجدوى", ser3Desc: "دراسات اقتصادية تضمن نجاح استثمارك.", ser4: "تأسيس الأنظمة", ser4Desc: "بناء هياكل محاسبية رقمية حديثة.", calcTitle: "الحاسبة الزكوية", whyUsTitle: "لماذا نحن؟", whyUsDesc: "نجمع بين المعرفة العميقة بالتشريعات المحلية والأنظمة العالمية." },
-            en: { name: "Ali Al-Nuami", title: "Financial Consultant", hero1: "Creating Value", heroDesc: "Your certified financial advisor for auditing, review, and innovative tax solutions.", consultBtn: "WhatsApp", startBtn: "Ali Assistant", ser1: "Audit & Review", ser1Desc: "Comprehensive review to ensure financial integrity.", ser2: "Zakat & Tax", ser2Desc: "Smart solutions for tax and zakat compliance.", ser3: "Feasibility Studies", ser3Desc: "Economic studies ensuring investment success.", ser4: "System Setup", ser4Desc: "Building modern digital accounting structures.", calcTitle: "Zakat Calculator", whyUsTitle: "Why Us?", whyUsDesc: "We combine deep local legislation knowledge with global standards." }
-        };
-
-        function setLanguage(lang) {
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            document.querySelectorAll('[data-key]').forEach(el => el.innerText = translations[lang][el.getAttribute('data-key')]);
-            document.getElementById('lang-ar').className = `lang-switch ${lang==='ar'?'active':''}`;
-            document.getElementById('lang-en').className = `lang-switch ${lang==='en'?'active':''}`;
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+            align-items: center;
         }
 
-        function calculateZakat() {
-            const val = document.getElementById('zakat-input').value;
-            if(val > 0) {
-                const res = document.getElementById('zakat-result');
-                res.innerText = "مبلغ الزكاة: " + (val * 0.025).toLocaleString() + " ريال";
-                res.classList.remove('hidden');
+        @media (min-width: 992px) {
+            .hero-layout {
+                grid-template-columns: 1.25fr 0.95fr;
             }
         }
 
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark'); document.body.classList.toggle('light');
-            const isDark = document.body.classList.contains('dark');
-            document.getElementById('theme-icon').setAttribute('data-lucide', isDark ? 'sun' : 'moon');
-            lucide.createIcons();
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.9rem;
+            background: var(--gold-subtle);
+            border: 1px solid var(--border-strong);
+            border-radius: 6px;
+            color: var(--gold-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
         }
 
-        function toggleChat() {
-            const win = document.getElementById('ai-chat-window');
-            win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
+        .hero-main-heading {
+            font-size: 2.25rem;
+            font-weight: 900;
+            line-height: 1.3;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
         }
 
-        function handleBot() {
-            const input = document.getElementById('chat-input');
-            const body = document.getElementById('chat-body');
-            if(!input.value.trim()) return;
-            const uDiv = document.createElement('div'); uDiv.className="chat-bubble user-msg"; uDiv.innerText=input.value; body.appendChild(uDiv);
-            setTimeout(() => {
-                const aDiv = document.createElement('div'); aDiv.className="chat-bubble ai-msg font-bold";
-                aDiv.innerHTML = `نحن هنا لخدمتك! يمكنك طلب استشارة تفصيلية عبر واتساب: <br><a href="https://wa.me/967782309030" class="underline">تواصل الآن 🟢</a>`;
-                body.appendChild(aDiv); body.scrollTop = body.scrollHeight;
-            }, 700);
-            input.value = "";
-        }
-        
-        async function shareSite() {
-            if (navigator.share) {
-                try {
-                    await navigator.share({
-                        title: 'علي النعمي | مستشار مالي معتمد',
-                        text: 'استشارات مالية وتدقيق حسابات ودراسات جدوى بمعايير عالمية.',
-                        url: window.location.href
-                    });
-                } catch (err) {
-                    console.log('Share failed', err);
-                }
-            } else {
-                alert('عذراً، متصفحك لا يدعم خاصية المشاركة المباشرة. يمكنك نسخ الرابط من المتصفح.');
+        @media (min-width: 768px) {
+            .hero-main-heading {
+                font-size: 3.1rem;
             }
         }
 
-        const dot = document.querySelector('.cursor-dot');
-        const outline = document.querySelector('.cursor-outline');
-        window.addEventListener('mousemove', (e) => {
-            dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px';
-            outline.animate({ left: e.clientX-20+'px', top: e.clientY-20+'px' }, { duration: 400, fill: "forwards" });
-        });
-
-        const words = ["أبعاداً جديدة", "رؤية مستقبلية", "حلولاً ذكية"];
-        let wordIdx = 0, charIdx = 0, isDeleting = false;
-        function type() {
-            const current = words[wordIdx];
-            const typeText = isDeleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
-            document.getElementById("typewriter").textContent = typeText;
-            if (!isDeleting && charIdx > current.length) { isDeleting = true; setTimeout(type, 1500); }
-            else if (isDeleting && charIdx < 0) { isDeleting = false; wordIdx = (wordIdx + 1) % words.length; setTimeout(type, 500); }
-            else { setTimeout(type, isDeleting ? 50 : 100); }
+        .hero-description {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: 2.25rem;
+            max-width: 620px;
         }
-        type();
 
-        particlesJS('particles-js', { "particles": { "number": { "value": 30 }, "color": { "value": "#c5a059" }, "opacity": { "value": 0.2 }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 150, "color": "#c5a059", "opacity": 0.1 }, "move": { "enable": true, "speed": 1 } } });
-    </script>
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FinancialService",
-      "name": "علي النعمي للاستشارات المالية",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "صنعاء",
-        "addressCountry": "YE"
-      },
-      "telephone": "+967782309030"
-    }
-    </script>
-</body>
-        </html>
-        
+        .hero-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2.25rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to left, var(--gold-primary), transparent);
+        }
+
+        .card-header-label {
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--gold-primary);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .pillar-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .pillar-row {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .pillar-symbol {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-subtle);
+            color: var(--gold-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pillar-info h3 {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .pillar-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ================= General Sections ================= */
+        .section-heading-wrapper {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            color: var(--gold-primary);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-main-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            line-height: 1.35;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-main-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        .section-lead-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ================= Services Section ================= */
+        .services-section {
+            padding: 6rem 0;
+            border-top: 1px solid var(--border-subtle);
+            background-color: var(--bg-base);
+        }
+
+        .services-matrix-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
+        }
+
+        @media (min-width: 680px) {
+            .services-matrix-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1040px) {
+            .services-matrix-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-feature-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .service-feature-card:hover {
+            border-color: var(--border-strong);
+            transform: translateY(-2px);
+        }
+
+        .service-symbol-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--gold-subtle);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            color: var(--gold-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .service-dimension-block {
+            margin-bottom: 0.85rem;
+        }
+
+        .dimension-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .challenge-label { color: #e2a03f; }
+        .solution-label { color: var(--text-primary); }
+
+        .dimension-text {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .service-card-bottom {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .deliverable-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+        }
+
+        .deliverable-value {
+            font-size: 0.82rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* ================= Methodology Section ================= */
+        .methodology-section {
+            padding: 6rem 0;
+            background-color: #040813;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .methodology-steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .methodology-steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .methodology-steps-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .methodology-step-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.75rem;
+            position: relative;
+        }
+
+        .step-numerical-badge {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: var(--gold-primary);
+            margin-bottom: 0.85rem;
+        }
+
+        .step-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
+        }
+
+        .step-box-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ================= About Section ================= */
+        .about-profile-section {
+            padding: 6rem 0;
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .about-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+            align-items: center;
+            margin-bottom: 3.5rem;
+        }
+
+        @media (min-width: 960px) {
+            .about-layout-grid {
+                grid-template-columns: 1.15fr 0.85fr;
+            }
+        }
+
+        .profile-text-paragraph {
+            font-size: 0.96rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .practice-pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .practice-pillars-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .practice-pillar-item {
+            display: flex;
+            gap: 0.85rem;
+            align-items: flex-start;
+        }
+
+        .pillar-bullet-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--gold-subtle);
+            color: var(--gold-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .practice-pillar-heading {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.35rem;
+        }
+
+        .practice-pillar-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .credentials-card {
+            background: var(--bg-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2.25rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+            position: relative;
+        }
+
+        .credentials-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 2px;
+            background: var(--gold-primary);
+        }
+
+        .card-top-header { margin-
